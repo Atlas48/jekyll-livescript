@@ -1,0 +1,34 @@
+language: ruby
+cache: bundler
+rvm:
+  - &latest_ruby 2.6
+  - 2.5
+  - 2.4
+env:
+  matrix:
+    - JEKYLL_VERSION="~> 3.8"
+matrix:
+  include:
+    - rvm: *latest_ruby
+      env: JEKYLL_VERSION="~> 3.7.4"
+    - rvm: *latest_ruby
+      env: JEKYLL_VERSION="~> 4.0"
+    - rvm: *latest_ruby
+      script: script/fmt
+branches:
+  only:
+    - master
+install:
+- travis_retry script/bootstrap
+script: script/cibuild
+notifications:
+  irc:
+    on_success: change
+    on_failure: change
+    channels:
+    - irc.freenode.org#jekyll
+    template:
+    - '%{repository}#%{build_number} %{message} %{build_url}'
+  email:
+    on_success: never
+    on_failure: change
