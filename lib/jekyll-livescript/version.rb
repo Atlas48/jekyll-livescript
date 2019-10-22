@@ -2,6 +2,6 @@
 
 module Jekyll
   module Coffeescript
-    VERSION = "2.0.0"
+    VERSION = "0.0.0"
   end
 end
