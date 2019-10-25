@@ -2,25 +2,25 @@
 
 require "spec_helper"
 
-describe(Jekyll::Converters::CoffeeScript) do
+describe(Jekyll::Converters::LiveScript) do
   let(:configuration) { Jekyll::Configuration::DEFAULTS }
   let(:converter) do
-    Jekyll::Converters::CoffeeScript.new(configuration)
+    Jekyll::Converters::LiveScript.new(configuration)
   end
   let(:coffeescript_content) do
-    <<~COFFEESCRIPT
+    <<~LIVESCRIPT
       # Functions:
       square = (x) -> x * x
 
       # Arrays:
-      list = [1, 2, 3, 4, 5]
+      list = [1 2 3 4 5]
 
       # Objects:
       math =
         root:   Math.sqrt
         square: square
         cube:   (x) -> x * square x
-    COFFEESCRIPT
+    LIVESCRIPT
   end
   let(:js_content) do
     <<~JS
@@ -47,7 +47,7 @@ describe(Jekyll::Converters::CoffeeScript) do
 
   context "matching file extensions" do
     it "matches .coffee files" do
-      expect(converter.matches(".coffee")).to be(true)
+      expect(converter.matches(".ls")).to be(true)
     end
   end
 
@@ -57,7 +57,7 @@ describe(Jekyll::Converters::CoffeeScript) do
     end
   end
 
-  context "converting CoffeeScript" do
+  context "converting LiveScript" do
     it "produces JS" do
       expect(converter.convert(coffeescript_content)).to eql(js_content)
     end
