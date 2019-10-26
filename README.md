@@ -2,6 +2,8 @@
 
 A LiveScript converter for Jekyll.
 
+Based off, and automatically converted from [`jekyll-coffeescript`](https://github.com/jekyll/jekyll-coffeescript).
+
 [![Build Status](https://travis-ci.org/jekyll/jekyll-livescript.svg?branch=master)](https://travis-ci.org/jekyll/jekyll-livescript)
 
 ## Installation
