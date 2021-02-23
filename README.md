@@ -1,4 +1,4 @@
-# Jekyll::Livescript
+# Jekyll::LiveScript
 
 A LiveScript converter for Jekyll.
 

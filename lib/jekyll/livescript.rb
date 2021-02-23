@@ -1,7 +1,8 @@
 # frozen_string_literal: true
+require "ruby-livescript"
 
 module Jekyll
-  module Converters
+  module LiveScriptConverter
     class LiveScript < Converter
       safe true
       priority :low
@@ -24,5 +25,12 @@ module Jekyll
         ::LiveScript.compile(content)
       end
     end
+    module LiveScriptFilter
+      def livescriptify(input)
+        LiveScript.compile(input)
+      end
+    end
   end
 end
+
+Liquid::Template.register_filter(Jekyll::LiveScriptFilter)

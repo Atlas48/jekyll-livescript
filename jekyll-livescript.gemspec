@@ -6,7 +6,7 @@ require "jekyll-livescript/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-livescript"
-  spec.version       = Jekyll::Livescript::VERSION
+  spec.version       = Jekyll::LiveScript::VERSION
   spec.authors       = ["Atlas Cove","Parker Moore"]
   spec.email         = ["AtlasJan@gmx.com","parkrmoore@gmail.com"]
   spec.summary       = "A LiveScript converter for Jekyll."

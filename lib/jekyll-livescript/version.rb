@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Jekyll
-  module Coffeescript
-    VERSION = "0.0.0"
+  module LiveScript
+    VERSION = "1.1.0"
   end
 end

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require "jekyll"
-require "jekyll-coffeescript/version"
-require "jekyll/converters/coffeescript"
+require "jekyll-livescript/version"
+require "jekyll/converters/livescript"
 
 module Jekyll
-  module Coffeescript
+  module LiveScript 
   end
 end
